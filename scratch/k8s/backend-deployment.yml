@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: backend-deployment
+  namespace: helpinghands-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helpinghandsBackend
+  template:
+    metadata:
+      labels:
+        app: helpinghandsBackend
+    spec:
+      containers:
+        - name: helpinghands-backend
+          image: jayvaghela0304/helpinghands-backend:v1
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              value: postgresql+asyncpg://postgres:sir12345@helpinghands.c96i2k8gocn6.ap-south-1.rds.amazonaws.com/helpinghands

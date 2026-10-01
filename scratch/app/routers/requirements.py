@@ -12,7 +12,7 @@ from app.schemas.auth import UserRole
 
 router = APIRouter(prefix="/api/requirements", tags=["Requirements"])
 
-DEFAULT_ATTENDANCE_RADIUS = 10000.0
+DEFAULT_ATTENDANCE_RADIUS = 300000.0
 
 class RequirementCreate(BaseModel):
     title: str = Field(..., max_length=200)

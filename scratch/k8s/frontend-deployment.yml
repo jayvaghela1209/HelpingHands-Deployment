@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: frontend-deployment
+  namespace: helpinghands-ns
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helpinghandsFrontend
+  template:
+    metadata:
+      labels:
+        app: helpinghandsFrontend
+    spec:
+      containers:
+        - name: helpinghands-frontend
+          image: jayvaghela0304/helpinghands-frontend:v3
+          ports:
+              - containerPort: 80
+         
