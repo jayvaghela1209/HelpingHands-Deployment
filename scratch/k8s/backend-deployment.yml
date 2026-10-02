@@ -20,4 +20,7 @@ spec:
             - containerPort: 8000
           env:
             - name: DATABASE_URL
-              value: postgresql+asyncpg://postgres:sir12345@helpinghands.c96i2k8gocn6.ap-south-1.rds.amazonaws.com/helpinghands
+              ValueFrom:
+                ConfigureKeyRef:
+                  name: backend-secret
+                  key: DATABASE_URL
