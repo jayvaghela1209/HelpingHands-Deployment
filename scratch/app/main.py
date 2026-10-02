@@ -29,6 +29,7 @@ origins = [
     "http://127.0.0.1:5174",
     "http://localhost:5175",
     "http://127.0.0.1:5175",
+    "http://a6826994e8a2947be9090c313c773034-1840317810.ap-south-1.elb.amazonaws.com"
     "https://helpinghands-roan.vercel.app",
 ]
 
